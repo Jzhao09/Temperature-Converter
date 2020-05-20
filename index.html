@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+
+<html>
+    <head>
+        <title>Temperature Converter</title>
+        <link rel="stylesheet" type="text/css" href="css/temp.css">
+        <!-- <script type="text/javascript" src="temp.js"></script> -->
+    </head>
+    
+    
+    
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="content">
+                    <h1>Temperature Converter Project</h1>
+                    <form action="">
+                        <div class="form-group">
+                            <label for="userInput">Please enter the temperature:</label><br>
+                            <input type="text" id="tempInput" name="tempInput">
+                            <select id="tempUnit">
+                                <option value="F">Fahrenheit</option>
+                                <option value="C">Celcius</option>
+                            </select><br><br>
+                        </div>
+                        <!--Output Temperature Options-->
+                        <div class="form-group">
+                            <input type="button" value="Fahrenheit" onclick="toFahrenheit()">
+                            <input type="button" value="Celsius" onclick="toCelcius()">
+                        </div>
+                        <!--Output Temperature Result-->
+                        <p id="result"></p>
+                    </form>
+                </div>
+            </div>
+            
+
+        </div>
+        
+        <script>
+            function toCelcius() {
+                var temperature = document.getElementById('tempInput');
+                var unit = document.getElementById('tempUnit');
+                unit = unit..toLowerCase()
+                switch(unit) {
+                    case "fahrenheit":
+                        temperature = (temperature - 32) * 5 / 9;
+                        break;
+                    case "celcius":
+                        temperature = (temperature * 9 / 5) + 32;
+                        break;
+                }
+                temperature = Math.round(temperature);
+
+                document.getElementById('result').innerHTML = temperature;
+            }
+
+        </script>
+
+    </body>
+    
+    
+    
+    
+    
+    
+    
+    
+</html>
